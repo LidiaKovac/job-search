@@ -1,0 +1,64 @@
+
+@import "../../styling/Colors";
+@import "../../styling/Flex";
+
+.home__wrap {
+    height: 100vh;
+
+    background-color: $bg-light;
+    @include row;
+    @include center--all;
+    .search__box {
+        background-color: $bg-dark;
+        width: 50%;
+        height: 250px;
+        border-radius: 150px;
+
+        @include column;
+        @include center--all;
+
+        h1 {
+            font-size: 32pt;
+            color: $text-light;
+            
+        }
+        form.inputs, .inputs__labels {
+            position: relative;
+            @include row;
+            width: 70%;
+            input {
+                height: 60px;
+                border: none;
+                font-size: 16pt;
+                font-weight: bold;
+                padding-left: 20px;
+                padding-top: 5px;
+                border: 3px solid $text-white;
+            }
+            #position {
+                width: 70%;border-right: none;
+                border-top-left-radius: 30px;
+                border-bottom-left-radius: 30px;
+                
+            }
+            label {
+                font-size: 10pt;
+                position: absolute;
+                top: 5px;
+                z-index: 2;
+                font-weight: bold;
+                color: $text-white;
+                margin-left: 20px;
+            }
+            label:last-of-type {
+                left: 70%;
+                margin-left: 13px;
+            }
+            #location {
+                width: 30%;
+                border-top-right-radius: 30px;
+                border-bottom-right-radius: 30px;
+            }
+        }
+    }
+}
