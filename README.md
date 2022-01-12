@@ -1,3 +1,3 @@
 # Job searching App - AKA Learning frontend testing
 
-Api used: https://www.reed.co.uk/api/1.0/search?keywords=dev&location=london
+Data used: https://www.kaggle.com/shivamb/real-or-fake-fake-jobposting-prediction converted to JSON. 
