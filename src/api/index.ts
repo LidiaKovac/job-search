@@ -2,7 +2,7 @@ import { Job } from "../utils";
 
 export const getSearchRes = async (pos: string, loc: string) => {
   //regular fetching of json file (very big, hence the await)
-  let raw = await fetch("/jobs.json");
+  let raw = await fetch(`https://job-search-api-lk.herokuapp.com/jobs?loc=${loc}&pos=${pos}`);
   let jobs: Array<Job> = await raw.json();
   let found = jobs
     .filter(

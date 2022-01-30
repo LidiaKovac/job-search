@@ -13,11 +13,11 @@ export const Search = () => {
   let loc = new URLSearchParams(url).get("loc");
  
   const [jobs, setJobs] = useState<Array<Job>>();
-  const [error, setError] = useState("");
+  const [error, setError] = useState("No error");
   useEffect(() => {
-    (pos && loc) ? getSearchRes(pos!, loc!).then((res) =>
-      res.status === 404 ? setError(res.message as string) : setJobs(res.message as Array<Job>)
-    ) : setError("No jobs found!")
+    (pos && loc) ? getSearchRes(pos!, loc!).then((res) => {
+      res.status !== 200 ? setError(res.message as string) :  setError(""); setJobs(res.message as Array<Job>)}
+    ) : setError("No search parameters found")
   }, []);
   return <div className="search__wrap">
       <div className="search__results">
@@ -25,7 +25,7 @@ export const Search = () => {
         
       </div>
       <div className="search__details">
-      {error && "No jobs found!"}
+      {error}
       </div>
   </div>;
 };

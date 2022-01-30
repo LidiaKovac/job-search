@@ -5,6 +5,7 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
+    "@testing-library/react-hooks": "^7.0.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/base-64": "^1.0.0",
     "@types/enzyme": "^3.10.11",
