@@ -1,6 +1,23 @@
 
 @import "../../styling/Colors";
+@import "../../styling/Flex";
+
 .search__wrap {
-    background-color: $bg-light;
+    background-color: $bg-dark;
     height: 100vh;
+
+    @include row;
+    align-items: flex-end;
+    .search__results {
+        width: 20%;
+        height: 100%;
+    }
+    .search__details {
+        width: 80%;
+        height: 90%;
+
+        background-color: $bg-light;
+
+        border-top-left-radius: 50px;
+    }
 }
