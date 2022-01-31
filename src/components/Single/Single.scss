@@ -8,10 +8,42 @@
 
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px; 
-
+    transition: .2s;
+    padding-left: 20px;
     &.selected {
         width: 100%;
         border-radius: 0px!important;
         border-left: 7px $important solid;
+        transition: .2s;
+    }
+    h3.job__title {
+        
+        width: 80%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .job__industry-location {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        div.job__industry, div.job__location {
+            
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 15pt;
+            font-weight: bold;
+        }
+        div.job__industry {
+            width: fit-content;
+            color: $text-light;
+
+            margin-right: 15px;
+        }
+        div.job__location {
+            width: fit-content;
+            color: $accent
+        }
     }
 }

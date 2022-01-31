@@ -2,6 +2,34 @@
 @import "../../styling/Colors";
 @import "../../styling/Flex";
 
+@media (max-width: 1050px) {
+    .search__box {
+        width: 90%!important;
+    }
+}
+
+@media (max-width: 550px) {
+    .search__box {
+        width: 100%!important;
+        border-radius: 0px!important;
+        h1 {
+            font-size: 22pt!important;
+        }
+    }
+    form.inputs, .inputs__labels {
+        @include column;
+        input {
+            width: 100%!important;
+            border-radius: 30px!important;
+        }
+        label:last-of-type {
+            top: 80px!important;
+            left: 0!important;
+            margin-left: 20px!important;
+        }
+    }
+}
+
 .home__wrap {
     height: 100vh;
 

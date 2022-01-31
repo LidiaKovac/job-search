@@ -8,7 +8,7 @@ export const Home = () => {
     const [location, setLocation] = useState("")
     const navigation = useNavigate()
     useEffect(()=> {
-        isValidated && navigation("/search?pos=" + position + "&loc=" + location)
+        isValidated && navigation("/search?pos=" + position + "&loc=" + location + "&page=" + 1)
     }, [isValidated])
   return (
     <div className="home__wrap">
