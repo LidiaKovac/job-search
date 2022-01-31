@@ -33,7 +33,7 @@ describe("Search component", () => {
     const text = await wrapper.findByText("No search parameters found");
     expect(text).toBeInTheDocument();
   });
-  it("2. Test if, with x jobs found, the user sees x elements.", async () => {
+  it("2. Test that the user sees 5 single job elements.", async () => {
     act(async () => {
       await ReactDOM.render(
         <BrowserRouter>
@@ -45,8 +45,8 @@ describe("Search component", () => {
       );
 
       await new Promise((r) => setTimeout(r, 3000));
-      const singleJobs = await document.querySelector(".single__wrap")
-      expect(singleJobs).toBeInTheDocument();
+      const singleJobs = await document.querySelectorAll(".single__wrap")
+      expect(singleJobs.length).toBe(5);
     });
     // const wrapper = render(
     //   <BrowserRouter>
